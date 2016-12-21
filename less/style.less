@@ -1,0 +1,211 @@
+@import "../node_modules/normalize.css/normalize.less";
+@font-face {
+  font-family: 'iconfont';  /* project id 205482 */
+  src: url('//at.alicdn.com/t/font_hypkwge0d8g58kt9.eot');
+  src: url('//at.alicdn.com/t/font_hypkwge0d8g58kt9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_hypkwge0d8g58kt9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_hypkwge0d8g58kt9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_hypkwge0d8g58kt9.svg#iconfont') format('svg');
+}
+.iconFont{
+  font-family: 'iconfont';
+  font-size: 16px;
+  font-style:normal;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-size: 14px;
+  font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+a {
+  transition: .2s ease-out all;
+}
+ul {
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+
+.header-nav {
+  padding: 10px 16%;
+  border-bottom: 1px solid #f5f5f5;
+  overflow: hidden;
+  .logo {
+    background: url("images/logo.png") no-repeat;
+    width: 132px;
+    height: 50px;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: block;
+    float: left;
+  }
+  ul,
+  .search-icon{
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 22px;
+    overflow: hidden;
+  }
+  li {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    a {
+      font-size: 16px;
+      color: #545454;
+      padding: 15px;
+      text-decoration: none;
+      &:hover {
+        color: rgba(255, 129, 128, 0.74);
+      }
+    }
+  }
+}
+.center-bg {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 550px;
+  background-image: url(images/city.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 62%;
+  background-repeat: no-repeat;
+}
+.slant-left,
+.slant-right{
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+.slant-left {
+  transform: rotate(5deg);
+  left: -49%;
+  bottom: -10px;
+}
+.slant-right {
+  transform: rotate(-5deg);
+  right: -49%;
+  bottom: -10px;
+}
+.center-info {
+  width: 40%;
+  margin: 100px auto 0;
+}
+.avatar-wrap {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 40px;
+  text-align: center;
+  border: 3px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  img {
+    width: 100%;
+  }
+}
+.center-msg {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.36);
+  padding: 31px;
+  color: #fff;
+}
+#content {
+  max-width: 800px;
+  margin: 100px auto;
+}
+.notice {
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.03);
+  font-size: 16px;
+  .notice-content {
+    margin-left: 10px;
+    color: #505050;
+  }
+}
+.main-title {
+  border-bottom: 1px dashed rgba(203, 203, 203, 0.47);
+  padding-bottom: 18px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 500;
+  margin-top: 70px;
+}
+.entry-title {
+  display: inline;
+  font-size: 22px;
+  a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 100;
+    &:hover {
+      color: #ff5454;
+    }
+  }
+}
+.p-time {
+  float: right;
+  color: #7b7b7b;
+}
+article.post {
+  p {
+    line-height: 30px;
+    text-size-adjust: 15px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/**滚动条**/
+::-moz-selection {
+  color: #fff;
+  background-color: rgb(125, 125, 125);
+}
+
+::selection {
+  color: #fff;
+  background-color: #f79292;
+}
+:-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece{
+  background:-webkit-gradient(linear,left top,right top,from(#f6f6f6),color-stop(50%,#fff),color-stop(75%,#fff),to(#fdfdfd));
+  width:11px;
+  height:11px
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece{
+  background:-webkit-gradient(linear,left top,right top,from(#f6f6f6),color-stop(50%,#fff),color-stop(75%,#fff),to(#fdfdfd));
+  width:11px;
+  height:11px
+}
+::-webkit-scrollbar-thumb{
+  border-width:0;
+  border-style:solid;
+  border-radius:6px;
+  background: rgb(125, 125, 125);
+}
+::-webkit-scrollbar{
+  width:8px;
+  height:14px
+}
