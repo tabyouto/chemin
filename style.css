@@ -1,3 +1,19 @@
+/*
+Theme Name: Chemin
+Theme URI: http://www.Chemin.me
+Author: Vicient
+Author URI: http://www.Chemin.me
+Description: new trip
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Chemin
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -404,8 +420,8 @@ template {
 }
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_hypkwge0d8g58kt9.eot');
-  src: url('//at.alicdn.com/t/font_hypkwge0d8g58kt9.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_hypkwge0d8g58kt9.woff') format('woff'), url('//at.alicdn.com/t/font_hypkwge0d8g58kt9.ttf') format('truetype'), url('//at.alicdn.com/t/font_hypkwge0d8g58kt9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_qfye8k60uul3di.eot');
+  src: url('//at.alicdn.com/t/font_qfye8k60uul3di.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_qfye8k60uul3di.woff') format('woff'), url('//at.alicdn.com/t/font_qfye8k60uul3di.ttf') format('truetype'), url('//at.alicdn.com/t/font_qfye8k60uul3di.svg#iconfont') format('svg');
   
   /* project id 205482 */
 }
@@ -426,6 +442,7 @@ body {
   word-break: break-all;
 }
 a {
+  text-decoration: none;
   transition: 0.2s ease-out all;
 }
 ul {
@@ -453,7 +470,6 @@ ul li {
   float: right;
   height: 50px;
   line-height: 50px;
-  text-decoration: none;
   margin-left: 10px;
   font-size: 22px;
   overflow: hidden;
@@ -467,7 +483,6 @@ ul li {
   font-size: 16px;
   color: #545454;
   padding: 15px;
-  text-decoration: none;
 }
 .header-nav li a:hover {
   color: rgba(255, 129, 128, 0.74);
@@ -535,6 +550,11 @@ ul li {
   margin-left: 10px;
   color: #505050;
 }
+#container {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+}
 .main-title {
   border-bottom: 1px dashed rgba(203, 203, 203, 0.47);
   padding-bottom: 18px;
@@ -549,7 +569,6 @@ ul li {
 }
 .entry-title a {
   color: #000;
-  text-decoration: none;
   font-weight: 100;
 }
 .entry-title a:hover {
@@ -557,7 +576,39 @@ ul li {
 }
 .p-time {
   float: right;
+  font-size: 12px;
   color: #7b7b7b;
+}
+.p-time .iconFont {
+  margin-right: 6px;
+}
+article.post {
+  position: relative;
+  margin: 84px 0;
+}
+article.post:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  border-bottom: 1px solid #ececec;
+}
+article.post:hover .info-meta {
+  transform: translate3d(-100%, 0, 0);
+  transition: 0.5s ease all;
+  opacity: 1;
+}
+article.post .post-header {
+  margin-left: 126px;
+}
+article.post img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+article.post .feature {
+  position: absolute;
 }
 article.post p {
   line-height: 30px;
@@ -565,6 +616,41 @@ article.post p {
   letter-spacing: 1px;
   font-size: 15px;
   font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+}
+article.post .info-meta {
+  color: #bdbdbd;
+  transition: 0.8s ease all;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  padding: 10px 20px;
+  top: 25px;
+  font-weight: 100;
+}
+article.post .info-meta div:first-child {
+  margin-bottom: 8px;
+}
+article.post .info-meta .iconFont {
+  font-size: 14px;
+}
+article.post .more-link {
+  text-align: right;
+  height: 36px;
+  line-height: 36px;
+}
+article.post .more-link a {
+  color: #939e00;
+}
+#footer {
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+#footer p {
+  text-align: center;
+  font-size: 12px;
+  color: #a3a3a3;
 }
 /**滚动条**/
 ::-moz-selection {
