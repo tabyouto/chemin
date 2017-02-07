@@ -430,6 +430,9 @@ article.post {
     span:last-child {
       float: right;
     }
+    span.no-next {
+      float: none;
+    }
   }
 }
 
@@ -672,6 +675,13 @@ article.post {
 
 }
 .Search-inner {
+  div {
+    position: relative;
+    padding: 2px;
+    border: 1px solid #ccc;
+  }
+}
+#searchform {
   max-width: 630px;
   margin: 0 auto;
   position: absolute;
@@ -679,10 +689,6 @@ article.post {
   top: 50%;
   left: 50%;
   transform: translate3D(-50%,-50%,0);
-  div {
-    position: relative;
-    border: 1px solid #ccc;
-  }
 }
 input[type='search'] {
   -webkit-appearance: none;
@@ -692,10 +698,9 @@ input[type='search'] {
 #SearchInput {
   display: block;
   width: 100%;
-  height: 34px;
-  padding: 35px 12px 35px 55px;
+  padding: 15px 12px 15px 55px;
+  line-height: 38px;
   font-size: 24px;
-  line-height: 1.42857143;
   color: #555;
   background-color: #fff;
 }
