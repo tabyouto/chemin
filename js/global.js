@@ -26,12 +26,13 @@
 
 
     $(document).ready(function() {
-
-        $('.search-icon').on('click',function() {
-            $('.search-form-wrap').toggleClass('form-hide');
+        var $searchIcon = $('search-icon');
+        var $searchForm = $('.search-form-wrap');
+        $searchIcon.on('click',function() {
+            $searchForm.toggleClass('form-hide');
         });
 
-    })
+    });
 
     var myLazyLoad = new LazyLoad({
         // example of options object -> see options section
