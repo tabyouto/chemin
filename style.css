@@ -705,11 +705,30 @@ article.post .more-link a {
 #primary .entry-content {
   overflow: hidden;
 }
+#primary .entry-content h2,
+#primary .entry-content h3,
+#primary .entry-content h4,
+#primary .entry-content h5,
+#primary .entry-content h6 {
+  background-color: #f3f2f2;
+  padding: 5px 0 5px 18px;
+  border-left: 6px solid #888;
+  font-weight: normal;
+  color: #5a5a5a;
+}
+#primary .entry-content h2 a,
 #primary .entry-content h3 a,
 #primary .entry-content h4 a,
 #primary .entry-content h5 a,
 #primary .entry-content h6 a {
   color: #5a5a5a;
+}
+#primary .entry-content h3,
+#primary .entry-content h4,
+#primary .entry-content h5,
+#primary .entry-content h6 {
+  padding: 5px 0 5px 18px;
+  border-left: 4px solid #888;
 }
 #primary .entry-content ul,
 #primary .entry-content ol {
@@ -717,6 +736,7 @@ article.post .more-link a {
 }
 #primary .entry-content ul li,
 #primary .entry-content ol li {
+  color: #666;
   margin: 10px 0;
 }
 #primary .entry-content ul li a,
