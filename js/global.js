@@ -8,25 +8,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     $(document).ready(function() {
-        var $searchIcon = $('search-icon');
+        var $searchIcon = $('.search-icon');
         var $searchForm = $('.search-form-wrap');
         $searchIcon.on('click',function() {
             $searchForm.toggleClass('form-hide');

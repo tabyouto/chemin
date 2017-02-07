@@ -29,8 +29,7 @@ require_once('plugin/smile.php');
 if (function_exists('add_theme_support'))
     add_theme_support('post-thumbnails');
 set_post_thumbnail_size(150, 150, true);
-function catch_first_image()
-{
+function catch_first_image() {
     global $post, $posts;
     $first_img = '';
     ob_start();
@@ -52,8 +51,8 @@ function catch_first_image()
 // Gravatar头像使用中国服务器
 function gravatar_cn($url)
 {
-    $gravatar_url = array('0.gravatar.com', '1.gravatar.com', '2.gravatar.com');
-    return str_replace($gravatar_url, 'cn.gravatar.com', $url);
+    $gravatar_url = array('http://0.gravatar.com', 'http://1.gravatar.com', 'http://2.gravatar.com','http://cn.gravatar.com');
+    return str_replace($gravatar_url, 'https://secure.gravatar.com', $url);
 }
 
 add_filter('get_avatar_url', 'gravatar_cn', 4);
@@ -294,12 +293,15 @@ function get_post_views($post_id)
 
 }
 
-function set_post_views()
-{
+function set_post_views() {
 
     global $post;
-
-    $post_id = $post->ID;
+    
+    if(isset($post->ID)) {
+        $post_id = $post->ID;
+    }else {
+        $post_id = '';
+    }
     $count_key = 'views';
     $count = get_post_meta($post_id, $count_key, true);
 
@@ -456,8 +458,6 @@ add_filter('pre_site_transient_update_themes', create_function('$a', "return nul
 remove_action('admin_init', '_maybe_update_core');    // 禁止 WordPress 检查更新
 remove_action('admin_init', '_maybe_update_plugins'); // 禁止 WordPress 更新插件
 remove_action('admin_init', '_maybe_update_themes');  // 禁止 WordPress 更新主题
-
-
 
 
 ?>

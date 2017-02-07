@@ -89,3 +89,4 @@ function disable_embeds_flush_rewrite_rules() {
     remove_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
     flush_rewrite_rules();
 }
+

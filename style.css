@@ -861,9 +861,8 @@ article.post .more-link a {
   color: #e43737;
 }
 .comment-wrap p img {
-  width: 30px!important;
-  height: 27px!important;
-  max-height: 27px!important;
+  height: 1.5em!important;
+  max-height: 1.5em!important;
 }
 .comment-wrap .comment-time {
   display: block;
@@ -1023,8 +1022,7 @@ article.post .more-link a {
 }
 .smile-icon {
   display: inline-block;
-  width: 33px;
-  height: 30px;
+  width: 24px;
   overflow: hidden;
 }
 .smile-icon img {
