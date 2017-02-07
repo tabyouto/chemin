@@ -36,7 +36,11 @@ function catch_first_image()
     ob_start();
     ob_end_clean();
     $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-    $first_img = $matches [1] [0];
+    if(empty($matches[1][0])) {
+        $first_img = '';
+    }else {
+        $first_img = $matches[1][0];
+    }
     if (empty($first_img)) {
         // $random = mt_rand(1, 6);
         // echo get_bloginfo ( 'stylesheet_directory' ).'/images/random/'.$random.'.jpg';
@@ -103,16 +107,15 @@ function chemin_scripts()
 add_action('wp_enqueue_scripts', 'chemin_scripts');
 
 
-//禁止加载WP自带的jquery
-if (!is_admin()) {//后台不禁止
-    function my_init_method()
-    {
-        wp_deregister_script('jquery');//取消原有的jquery定义
-    }
 
-    add_action('init', 'my_init_method');
+//禁止加载WP自带的jquery
+function modify_jquery() {
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+    }
 }
-wp_deregister_script('l10n');
+add_action('init', 'modify_jquery');
+
 
 
 function chemin_setup()

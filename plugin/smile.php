@@ -83,10 +83,10 @@ function custom_smilies_src ($img_src, $img, $siteurl){
     return get_bloginfo('template_directory').'/images/smilies/'.$img;
 }
 
+add_filter('comment_form_after_fields',add_smile);
 /**
  * 插入表情
  */
 function add_smile() {
     include(TEMPLATEPATH . '/smiley.php');
 }
-add_filter('comment_form_after_fields',add_smile);
