@@ -12,9 +12,9 @@
 		'comment_notes_before' => '',
 		'fields' => apply_filters( 'comment_form_default_fields', 
 			array(
-				'author' => '<p class="comment-form-author">' . '<label for="author">' . __( '昵称' ) . '</label> ' . ( $req ? '<span class="require-single">* </span>' : '' ) .'<input id="author" class="am-" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="20"' . ($req ? "aria-required='true'" : '' ) . ' /></p>',
+				'author' => '<p class="comment-form-author">' . '<label for="author">' . __( '昵称' ) . '</label> ' . ( $req ? '<span class="require-single">* </span>' : '' ) .'<input id="author" class="am-" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="20"' . ($req ? "aria-required='true'" : '' ) . ' required="required" /></p>',
 
-				'email'  => '<p class="comment-form-email">' .'<label for="email">' . __( '邮箱' ) . '</label> ' .( $req ? '<span class="require-single">* </span>' : '' ) .'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . ($req ? "aria-required='true'" : '' ) . ' />'.'</p>',
+				'email'  => '<p class="comment-form-email">' .'<label for="email">' . __( '邮箱' ) . '</label> ' .( $req ? '<span class="require-single">* </span>' : '' ) .'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . ($req ? "aria-required='true'" : '' ) . ' required="required" />'.'</p>',
 
 				'url'    => '<p class="comment-form-url"><label for="url">站点</label><input type="text" size="30" value="'.$comment_author_url.'" name="url" id="url"></p>' ) ),
 

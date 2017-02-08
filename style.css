@@ -444,6 +444,7 @@ body {
 a {
   text-decoration: none;
   transition: 0.2s ease-out all;
+  color: #666;
 }
 a:hover {
   color: #02b875;
@@ -697,7 +698,7 @@ article.post .more-link a {
   height: 1px;
   background-color: #d2e8fa;
 }
-#primary p {
+#primary article p {
   line-height: 30px;
   font-size: 16px;
   font-weight: 100;
@@ -820,11 +821,13 @@ article.post .more-link a {
   margin-right: 10px;
 }
 #primary .post-footer .tag-wrap a {
-  color: #949494;
   display: inline-block;
-  border: 1px solid #949494;
+  padding: 3px 8px;
+  background-color: #f0f0f0;
+  color: rgba(0, 0, 0, 0.44);
   border-radius: 3px;
-  padding: 2px 5px;
+  margin-right: 8px;
+  font-size: 12px;
 }
 #primary .post-footer .iconFont {
   vertical-align: middle;
@@ -862,6 +865,7 @@ article.post .more-link a {
 }
 .comment-wrap p img {
   height: 1.5em!important;
+  vertical-align: middle;
   max-height: 1.5em!important;
 }
 .comment-wrap .comment-time {
@@ -904,7 +908,7 @@ article.post .more-link a {
   line-height: 27px;
   margin: 20px 0 0 0;
   color: rgba(0, 0, 0, 0.66);
-  font-size: 15px;
+  font-size: 14px;
 }
 .comment-author {
   float: left;
