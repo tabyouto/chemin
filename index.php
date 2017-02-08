@@ -15,7 +15,7 @@
             <div class="notice">
                 <i class="iconFont">&#xe600;</i>: <span class="notice-content"><?php echo chemin_option('notice_title');?></span>
             </div>
-            <div class="article-wrap">
+            <div class="article-wrap" id="article-wrap">
                 <h2 class="main-title">近况：</h2>
                 <?php
                 if (have_posts()):
@@ -57,5 +57,6 @@
                 ?>
 
             </div>
+            <div id="page"><?php par_pagenavi(6); ?></div>
         </div>
         <?php get_footer(); ?>

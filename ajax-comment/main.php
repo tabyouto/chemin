@@ -45,25 +45,29 @@ if(!function_exists('fa_ajax_comment_callback')) :
         }
         $user = wp_get_current_user();
         do_action('set_comment_cookies', $comment, $user);
-        $GLOBALS['comment'] = $comment; //根据你的评论结构自行修改，如使用默认主题则无需修改
-        ?>
-        <li <?php comment_class(); ?>>
-            <article class="comment-body">
-                <footer class="comment-meta">
-                    <div class="comment-author vcard">
-                        <?php echo get_avatar( $comment, $size = '56')?>
-                        <b class="fn">
-                            <?php echo get_comment_author_link();?>
-                        </b>
-                    </div>
-                    <div class="comment-metadata">
-                        <?php echo get_comment_date(); ?>
-                    </div>
-                </footer>
-                <div class="comment-content">
-                    <?php comment_text(); ?>
+        $GLOBALS['comment'] = $comment; ?>
+        <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+            <div id="comment-<?php comment_ID(); ?>" class="comment-body">
+                <div class="comment-author vcard">
+                    <?php echo get_avatar($comment, $size = '35'); ?>
+                    <cite class="fn">
+                        <?php printf(__('%s'), get_comment_author_link()); ?> <span class="say"></span>
+                        <?php if ($comment->comment_approved == '0') : ?>
+                            <em><?php _e('等待审核！'); ?></em>
+                        <?php endif; ?>
+                    </cite>
+                    <time class="comment-time"><?php printf(__('%1$s at %2$s'), get_comment_date('Y-m-d'), ''); ?></time>
                 </div>
-            </article>
+                <div class="comment-meta comment-meta-data">
+                    <?php edit_comment_link(__('(编辑)'), '', ''); ?>
+                </div>
+                <!-- <div class="comment-content"> -->
+                <?php comment_text(); ?>
+                <!-- </div> -->
+                <div class="reply">
+                    <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
+                </div>
+            </div>
         </li>
         <?php die();
     }

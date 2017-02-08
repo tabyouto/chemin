@@ -15,6 +15,50 @@
             $searchForm.toggleClass('form-hide');
         });
 
+        var scroll = {
+            runScroll: function() {
+                this.scrollTo(document.body, document.getElementById('article-wrap').offsetTop, 200);
+            },
+            scrollTo: function(element, to, duration) {
+                if (duration <= 0) return;
+                var difference = to - element.scrollTop;
+                var perTick = difference / duration * 10;
+
+                setTimeout(function() {
+                    element.scrollTop = element.scrollTop + perTick;
+                    if (element.scrollTop == to) return;
+                    scrollTo(element, to, duration - 10);
+                }, 10);
+            }
+
+        };
+
+        var $$articleWrap = document.getElementById('article-wrap');
+        console.log(document.documentElement.scrollTop);
+        scroll.runScroll();
+
+
+        // function runScroll() {
+        //     scrollTo(document.body, 0, 600);
+        // }
+        // var scrollme;
+        // scrollme = document.querySelector("#scrollme");
+        // scrollme.addEventListener("click",runScroll,false)
+
+        function scrollTo(element, to, duration) {
+            if (duration <= 0) return;
+            var difference = to - element.scrollTop;
+            var perTick = difference / duration * 10;
+
+            setTimeout(function() {
+                element.scrollTop = element.scrollTop + perTick;
+                if (element.scrollTop == to) return;
+                scrollTo(element, to, duration - 10);
+            }, 10);
+        }
+
+
+
     });
 
     var myLazyLoad = new LazyLoad({

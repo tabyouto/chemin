@@ -610,6 +610,9 @@ article.post {
   position: relative;
   margin: 84px 0;
 }
+article.post:last-child {
+  margin: 84px 0 10px;
+}
 article.post:after {
   content: '';
   position: absolute;
@@ -671,6 +674,7 @@ article.post .more-link a {
 #footer {
   padding: 10px 0;
   position: absolute;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
   width: 100%;
   bottom: 0;
 }
@@ -1041,6 +1045,20 @@ article.post .more-link a {
 }
 .category-meta .iconFont {
   position: absolute;
+}
+/**分页样式**/
+#page {
+  text-align: center;
+  padding: 50px 0 30px;
+}
+#page a {
+  ont-size: 14px;
+  display: inline-block;
+  margin: 0 5px;
+  padding: 10px;
+}
+#page a.current {
+  border-bottom: 2px solid #ff4c6d;
 }
 /****search form****/
 .search-form-wrap {

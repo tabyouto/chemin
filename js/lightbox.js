@@ -66,7 +66,7 @@
 	function buildDiv() {
 		var createNode = document.createElement("div");
 		createNode.setAttribute('id','mask');
-		createNode.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.6)';
+		createNode.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.6);z-index:555';
 		document.body.appendChild(createNode);
 		bindUI();
 		return createNode;

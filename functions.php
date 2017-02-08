@@ -29,15 +29,16 @@ require_once('plugin/smile.php');
 if (function_exists('add_theme_support'))
     add_theme_support('post-thumbnails');
 set_post_thumbnail_size(150, 150, true);
-function catch_first_image() {
+function catch_first_image()
+{
     global $post, $posts;
     $first_img = '';
     ob_start();
     ob_end_clean();
     $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-    if(empty($matches[1][0])) {
+    if (empty($matches[1][0])) {
         $first_img = '';
-    }else {
+    } else {
         $first_img = $matches[1][0];
     }
     if (empty($first_img)) {
@@ -51,7 +52,7 @@ function catch_first_image() {
 // Gravatar头像使用中国服务器
 function gravatar_cn($url)
 {
-    $gravatar_url = array('http://0.gravatar.com', 'http://1.gravatar.com', 'http://2.gravatar.com','http://cn.gravatar.com');
+    $gravatar_url = array('http://0.gravatar.com', 'http://1.gravatar.com', 'http://2.gravatar.com', 'http://cn.gravatar.com');
     return str_replace($gravatar_url, 'https://secure.gravatar.com', $url);
 }
 
@@ -106,15 +107,15 @@ function chemin_scripts()
 add_action('wp_enqueue_scripts', 'chemin_scripts');
 
 
-
 //禁止加载WP自带的jquery
-function modify_jquery() {
+function modify_jquery()
+{
     if (!is_admin()) {
         wp_deregister_script('jquery');
     }
 }
-add_action('init', 'modify_jquery');
 
+add_action('init', 'modify_jquery');
 
 
 function chemin_setup()
@@ -259,7 +260,6 @@ function chemin_setup()
 add_action('after_setup_theme', 'chemin_setup');
 
 
-
 /**
  * 改造img标签 懒加载
  */
@@ -293,13 +293,14 @@ function get_post_views($post_id)
 
 }
 
-function set_post_views() {
+function set_post_views()
+{
 
     global $post;
-    
-    if(isset($post->ID)) {
+
+    if (isset($post->ID)) {
         $post_id = $post->ID;
-    }else {
+    } else {
         $post_id = '';
     }
     $count_key = 'views';
@@ -459,5 +460,77 @@ remove_action('admin_init', '_maybe_update_core');    // 禁止 WordPress 检查
 remove_action('admin_init', '_maybe_update_plugins'); // 禁止 WordPress 更新插件
 remove_action('admin_init', '_maybe_update_themes');  // 禁止 WordPress 更新主题
 
+
+function par_pagenavi($range = 3)
+{
+    global $paged, $wp_query;
+    if (!$max_page) {
+        $max_page = $wp_query->max_num_pages;
+    }
+    if ($max_page > 1) {
+        if (!$paged) {
+            $paged = 1;
+        }
+        if($paged != 1){echo "<a href='" . get_pagenum_link(1) . "' class='extend' title='跳转到首页'>首页</a>";}
+        if ($max_page > $range) {
+            if ($paged < $range) {
+                for ($i = 1; $i <= ($range + 1); $i++) {
+                    echo "<a href='" . get_pagenum_link($i) . "'";
+                    if ($i == $paged) echo " class='current'";
+                    echo ">$i</a>";
+                }
+            } elseif ($paged >= ($max_page - ceil(($range / 2)))) {
+                for ($i = $max_page - $range; $i <= $max_page; $i++) {
+                    echo "<a href='" . get_pagenum_link($i) . "'";
+                    if ($i == $paged) echo " class='current'";
+                    echo ">$i</a>";
+                }
+            } elseif ($paged >= $range && $paged < ($max_page - ceil(($range / 2)))) {
+                for ($i = ($paged - ceil($range / 2)); $i <= ($paged + ceil(($range / 2))); $i++) {
+                    echo "<a href='" . get_pagenum_link($i) . "'";
+                    if ($i == $paged) echo " class='current'";
+                    echo ">$i</a>";
+                }
+            }
+        } else {
+            for ($i = 1; $i <= $max_page; $i++) {
+                echo "<a href='" . get_pagenum_link($i) . "'";
+                if ($i == $paged) echo " class='current'";
+                echo ">$i</a>";
+            }
+        }
+        next_posts_link(' »');
+    }
+}
+
+
+function get_the_link_items($id = null)
+{
+    $bookmarks = get_bookmarks('orderby=date&category=' . $id);
+    $output = '';
+    if (!empty($bookmarks)) {
+        $output .= '<ul class="link-items fontSmooth">';
+        foreach ($bookmarks as $bookmark) {
+            $output .= '<li class="link-item"><a class="link-item-inner effect-apollo" href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" ><span class="sitename">' . $bookmark->link_name . '</span><div class="linkdes">' . $bookmark->link_description . '</div></a></li>';
+        }
+        $output .= '</ul>';
+    }
+    return $output;
+}
+
+function get_link_items()
+{
+    $linkcats = get_terms('link_category');
+    if (!empty($linkcats)) {
+        foreach ($linkcats as $linkcat) {
+            $result .= '<h3 class="link-title">' . $linkcat->name . '</h3>';
+            if ($linkcat->description) $result .= '<div class="link-description">' . $linkcat->description . '</div>';
+            $result .= get_the_link_items($linkcat->term_id);
+        }
+    } else {
+        $result = get_the_link_items();
+    }
+    return $result;
+}
 
 ?>

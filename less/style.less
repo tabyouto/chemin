@@ -213,6 +213,9 @@ textarea{
 article.post {
   position: relative;
   margin: 84px 0;
+  &:last-child {
+    margin: 84px 0 10px;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -278,6 +281,7 @@ article.post {
 #footer {
   padding: 10px 0;
   position: absolute;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
   width: 100%;
   bottom: 0;
   p {
@@ -669,9 +673,22 @@ article.post {
 }
 
 
+/**分页样式**/
+#page {
+  text-align: center;
+  padding: 50px 0 30px;
+  a {
+    ont-size: 14px;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px;
+    &.current {
+      border-bottom: 2px solid #ff4c6d;
+    }
+  }
+}
+
 /****search form****/
-
-
 .search-form-wrap {
   position: fixed;
   top: 0;
