@@ -1165,17 +1165,32 @@ input[type='search'] {
 .links .link-title {
   color: rgba(0, 0, 0, 0.74);
   font-weight: 100;
+  margin: 32px 0 20px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.links .link-items {
+  overflow: hidden;
 }
 .links li.link-item {
   float: left;
+  position: relative;
+  margin: 15px 25px;
+  padding: 0 15px;
   display: inline-block;
   overflow: hidden;
 }
 .links li.link-item:before,
 .links li.link-item:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+.links li.link-item:before,
+.links li.link-item:after {
   right: 0;
   bottom: 0;
-  background: #000;
+  background: #02b875;
 }
 .links li.link-item:before {
   width: 100%;
@@ -1195,7 +1210,10 @@ input[type='search'] {
 .links li.link-item > a:after {
   left: 0;
   top: 0;
-  background: #000;
+  background: #02b875;
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
 }
 .links li.link-item > a:before {
   width: 100%;

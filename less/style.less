@@ -842,16 +842,30 @@ input[type='search'] {
   .link-title {
     color: rgba(0, 0, 0, 0.74);
     font-weight: 100;
+    margin: 32px 0 20px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .link-items {
+    overflow: hidden;
   }
   li.link-item {
     float: left;
+    position: relative;
+    margin: 15px 25px;
+    padding: 0 15px;
     display: inline-block;
     overflow: hidden;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      transition: transform .5s ease;
+    }
     &:before,
     &:after {
       right: 0;
       bottom: 0;
-      background: #000;
+      background: #02b875;
     }
     &:before {
       width: 100%;
@@ -870,7 +884,10 @@ input[type='search'] {
       &:after {
         left: 0;
         top: 0;
-        background: #000;
+        background: #02b875;
+        content: '';
+        position: absolute;
+        transition: transform .5s ease;
       }
       &:before {
         width: 100%;
