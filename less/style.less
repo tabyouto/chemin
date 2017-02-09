@@ -15,6 +15,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 */
 @import "../node_modules/normalize.css/normalize.less";
+
 @font-face {
   font-family: 'iconfont';  /* project id 205482 */
   src: url('//at.alicdn.com/t/font_2ehpigmsigytlnmi.eot');
@@ -23,22 +24,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
   url('//at.alicdn.com/t/font_2ehpigmsigytlnmi.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_2ehpigmsigytlnmi.svg#iconfont') format('svg');
 }
-.iconFont{
+
+.iconFont {
   font-family: 'iconfont';
   font-size: 16px;
-  font-style:normal;
+  font-style: normal;
 }
+
 body,
 html {
   width: 100%;
   height: 100%;
 }
+
 body {
   font-size: 14px;
-  font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
+  font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
   word-wrap: break-word;
   word-break: break-all;
 }
+
 a {
   text-decoration: none;
   transition: .2s ease-out all;
@@ -47,29 +52,32 @@ a {
     color: #02b875;
   }
 }
+
 ul {
   margin: 0;
   li {
     list-style: none;
   }
 }
+
 p {
   margin-bottom: 1.5em;
-  font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
+  font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
 }
+
 input,
-textarea{
+textarea {
   &:focus {
     outline: none;
   }
 }
+
 .error-msg {
   text-align: center;
   font-size: 18px;
   color: #000;
   margin: 100px 0;
 }
-
 
 .header-nav {
   padding: 10px 16%;
@@ -87,7 +95,7 @@ textarea{
     float: left;
   }
   ul,
-  .search-icon{
+  .search-icon {
     float: right;
     height: 50px;
     line-height: 50px;
@@ -121,24 +129,28 @@ textarea{
   background-position: center 62%;
   background-repeat: no-repeat;
 }
+
 .slant-left,
-.slant-right{
+.slant-right {
   width: 100%;
   height: 100px;
   background-color: #fff;
   position: absolute;
   bottom: 0;
 }
+
 .slant-left {
   transform: rotate(5deg);
   left: -49%;
   bottom: -10px;
 }
+
 .slant-right {
   transform: rotate(-5deg);
   right: -49%;
   bottom: -10px;
 }
+
 .center-info {
   width: 40%;
   margin: 100px auto 0;
@@ -151,24 +163,27 @@ textarea{
   border: 3px solid rgba(0, 0, 0, 0.25);
   border-radius: 50%;
   overflow: hidden;
- div {
-   width: 100%;
-   height: 100%;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: 50%;
- }
+  div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
 }
+
 .center-msg {
   text-align: center;
   background: rgba(0, 0, 0, 0.36);
   padding: 31px;
   color: #fff;
 }
+
 #content {
   max-width: 800px;
   margin: 100px auto;
 }
+
 .notice {
   padding: 25px;
   background-color: rgba(0, 0, 0, 0.03);
@@ -178,11 +193,13 @@ textarea{
     color: #505050;
   }
 }
+
 #container {
   position: relative;
   min-height: 100%;
   overflow: hidden;
 }
+
 .main-title {
   border-bottom: 1px dashed rgba(203, 203, 203, 0.47);
   padding-bottom: 18px;
@@ -191,6 +208,7 @@ textarea{
   font-weight: 500;
   margin-top: 70px;
 }
+
 .entry-title {
   display: inline;
   font-size: 22px;
@@ -202,6 +220,7 @@ textarea{
     }
   }
 }
+
 .p-time {
   float: right;
   font-size: 12px;
@@ -210,6 +229,7 @@ textarea{
     margin-right: 6px;
   }
 }
+
 article.post {
   position: relative;
   margin: 84px 0;
@@ -226,7 +246,7 @@ article.post {
   }
   &:hover {
     .info-meta {
-      transform: translate3d(-100%,0,0);
+      transform: translate3d(-100%, 0, 0);
       transition: 0.5s ease all;
       opacity: 1;
     }
@@ -289,7 +309,8 @@ article.post {
     font-size: 12px;
     color: #a3a3a3;
   }
- }
+}
+
 /***single.php**/
 #primary {
   .entry-title {
@@ -328,7 +349,7 @@ article.post {
       background-color: #f3f2f2;
       padding: 5px 0 5px 18px;
       border-left: 6px solid #888;
-      font-weight:normal;
+      font-weight: normal;
       color: #5a5a5a;
       a {
         color: #5a5a5a;
@@ -337,11 +358,11 @@ article.post {
     h3,
     h4,
     h5,
-    h6{
+    h6 {
       padding: 5px 0 5px 18px;
       border-left: 4px solid #888;
     }
-    ul,ol {
+    ul, ol {
       margin: 10px;
       li {
         color: #666;
@@ -399,7 +420,7 @@ article.post {
       top: .4em;
       left: -.2em;
       color: #ddd;
-      font-family: "SimHei",sans-serif;
+      font-family: "SimHei", sans-serif;
     }
     blockquote:after, q:after {
       content: '”';
@@ -408,7 +429,7 @@ article.post {
       bottom: -.2em;
       right: -.2em;
       color: #ddd;
-      font-family: "SimHei",sans-serif;
+      font-family: "SimHei", sans-serif;
     }
   }
   .post-footer {
@@ -422,11 +443,11 @@ article.post {
       .iconFont {
         margin-right: 10px;
       }
-      a{
+      a {
         display: inline-block;
         padding: 3px 8px;
         background-color: #f0f0f0;
-        color: rgba(0,0,0,.44);
+        color: rgba(0, 0, 0, .44);
         border-radius: 3px;
         margin-right: 8px;
         font-size: 12px;
@@ -464,11 +485,11 @@ article.post {
   }
 }
 
-
 //comment评论
 .butterBar {
-  transition: .5s ease all ;
+  transition: .5s ease all;
 }
+
 .comment-wrap {
   margin: 48px auto;
   max-width: 800px;
@@ -477,10 +498,10 @@ article.post {
       color: #e43737;
     }
     img {
-      height: 1.5em!important;
+      height: 1.5em !important;
       //height: 27px!important;
       vertical-align: middle;
-      max-height: 1.5em!important;
+      max-height: 1.5em !important;
     }
   }
   .comment-time {
@@ -526,11 +547,12 @@ article.post {
     clear: both;
     line-height: 27px;
     margin: 20px 0 0 0;
-    color: rgba(0,0,0,.66);
+    color: rgba(0, 0, 0, .66);
     font-size: 14px;
   }
 
 }
+
 .comment-author {
   float: left;
   min-width: 116px;
@@ -538,21 +560,25 @@ article.post {
   margin-bottom: 10px;
   cursor: default;
 }
+
 #comments {
   text-align: center;
   font-weight: normal;
   //color: $comment-title-color;
   font-size: 16px;
 }
+
 .comment-reply-title {
   font-size: 18px;
-  color: rgba(0,0,0,.44);
+  color: rgba(0, 0, 0, .44);
   margin-bottom: 20px;
   font-weight: normal;
 }
+
 .comment-edit-link {
   line-height: 25px;
 }
+
 .comment-body {
   padding: 10px;
   position: relative;
@@ -562,16 +588,19 @@ article.post {
     }
   }
 }
+
 .depth-1 {
   margin: 20px 0 20px 0;
   border-bottom: 1px solid #eee;
   padding: 0 0 12px;
   overflow: hidden;
 }
-.comment-wrap>ol>.children {
+
+.comment-wrap > ol > .children {
   margin-left: 30px;
   margin-top: 10px;
 }
+
 .reply {
   position: absolute;
   right: 15px;
@@ -589,10 +618,12 @@ article.post {
     }
   }
 }
+
 #respond {
   border-top: 1px solid #eee;
   position: relative;
 }
+
 #respond:nth-of-type(n):before {
   content: "";
   position: absolute;
@@ -603,16 +634,19 @@ article.post {
   left: -100px;
   opacity: 0;
 }
+
 #respond:hover:before {
   left: 0;
   opacity: 1;
 }
+
 #cancel-comment-reply-link {
   float: right;
   color: rgba(0, 0, 0, 0.28);
 }
+
 #commentform {
-  input,textarea {
+  input, textarea {
     max-width: 220px;
     width: 100%;
     padding: 0 10px;
@@ -621,7 +655,7 @@ article.post {
     line-height: 38px;
     height: 38px;
     &:focus {
-      border-color:  #f55;
+      border-color: #f55;
     }
   }
   textarea {
@@ -646,13 +680,14 @@ article.post {
     margin: 0;
   }
 }
+
 .comment-form-url {
   label {
     margin-right: 16px;
   }
 }
 
-.smile-icon{
+.smile-icon {
   display: inline-block;
   width: 24px;
   overflow: hidden;
@@ -671,7 +706,6 @@ article.post {
     position: absolute;
   }
 }
-
 
 /**分页样式**/
 #page {
@@ -698,23 +732,26 @@ article.post {
   background-color: #fff;
   padding: 40px 0;
   border-top: 1px solid #eee;
-  transform: translate3D(0,0,0);
+  transform: translate3D(0, 0, 0);
   transition: .5s ease-in-out all;
   .iconFont {
     font-size: 35px;
     color: #c1c1c1;
     position: absolute;
-    left:10px;
+    left: 10px;
     top: 50%;
-    transform: translate3D(0,-50%,0);
+    transform: translate3D(0, -50%, 0);
   }
 }
+
 .form-hide {
-  transform: translate3D(0,-100%,0);
+  transform: translate3D(0, -100%, 0);
 }
+
 .form-show {
 
 }
+
 .Search-inner {
   div {
     position: relative;
@@ -722,6 +759,7 @@ article.post {
     border: 1px solid #ccc;
   }
 }
+
 #searchform {
   max-width: 630px;
   margin: 0 auto;
@@ -729,13 +767,15 @@ article.post {
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate3D(-50%,-50%,0);
+  transform: translate3D(-50%, -50%, 0);
 }
+
 input[type='search'] {
   -webkit-appearance: none;
   border: none;
   box-sizing: border-box;
 }
+
 #SearchInput {
   display: block;
   width: 100%;
@@ -745,7 +785,6 @@ input[type='search'] {
   color: #555;
   background-color: #fff;
 }
-
 
 /****search.php****/
 .search-wrap {
@@ -767,6 +806,7 @@ input[type='search'] {
     padding: 10px 50px;
   }
 }
+
 .search-result {
   border: 1px dashed #ddd;
   padding: 16px 0;
@@ -774,10 +814,12 @@ input[type='search'] {
   font-size: 20px;
   color: #828282;
 }
+
 .sorry {
   color: #8C8C8C;
   margin-top: 40px;
 }
+
 .search-no-results {
   border: 1px solid #eaeaea;
   padding: 15px 10px;
@@ -794,6 +836,58 @@ input[type='search'] {
   }
 }
 
+/**post-links 友情链接**/
+.links {
+  overflow: hidden;
+  .link-title {
+    color: rgba(0, 0, 0, 0.74);
+    font-weight: 100;
+  }
+  li.link-item {
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    &:before,
+    &:after {
+      right: 0;
+      bottom: 0;
+      background: #000;
+    }
+    &:before {
+      width: 100%;
+      height: 2px;
+      transform: translateX(-100%);
+    }
+    &:after {
+      width: 2px;
+      height: 100%;
+      transform: translateY(100%);
+    }
+    & > a {
+      display: block;
+      padding: 10px;
+      &:before,
+      &:after {
+        left: 0;
+        top: 0;
+        background: #000;
+      }
+      &:before {
+        width: 100%;
+        height: 2px;
+        transform: translateX(100%);
+      }
+      &:after {
+        width: 2px;
+        height: 100%;
+        transform: translateY(-100%);
+      }
+    }
+    &:hover:before, &:hover:after, &:hover > a:before, &:hover > a:after {
+      transform: translate(0, 0);
+    }
+  }
+}
 
 /**滚动条**/
 //::-moz-selection {
@@ -806,33 +900,30 @@ input[type='search'] {
 //  background-color: #f79292;
 //}
 :-webkit-scrollbar-track,
-::-webkit-scrollbar-track-piece{
-  background:-webkit-gradient(linear,left top,right top,from(#f6f6f6),color-stop(50%,#fff),color-stop(75%,#fff),to(#fdfdfd));
-  width:11px;
-  height:11px
+::-webkit-scrollbar-track-piece {
+  background: -webkit-gradient(linear, left top, right top, from(#f6f6f6), color-stop(50%, #fff), color-stop(75%, #fff), to(#fdfdfd));
+  width: 11px;
+  height: 11px
 }
+
 ::-webkit-scrollbar-track,
-::-webkit-scrollbar-track-piece{
-  background:-webkit-gradient(linear,left top,right top,from(#f6f6f6),color-stop(50%,#fff),color-stop(75%,#fff),to(#fdfdfd));
-  width:11px;
-  height:11px
+::-webkit-scrollbar-track-piece {
+  background: -webkit-gradient(linear, left top, right top, from(#f6f6f6), color-stop(50%, #fff), color-stop(75%, #fff), to(#fdfdfd));
+  width: 11px;
+  height: 11px
 }
-::-webkit-scrollbar-thumb{
-  border-width:0;
-  border-style:solid;
-  border-radius:6px;
+
+::-webkit-scrollbar-thumb {
+  border-width: 0;
+  border-style: solid;
+  border-radius: 6px;
   background: rgb(125, 125, 125);
 }
-::-webkit-scrollbar{
-  width:8px;
-  height:14px
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 14px
 }
-
-
-
-
-
-
 
 /**
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
@@ -1001,6 +1092,7 @@ pre[class*="language-"]:after {
 .token.bold {
   font-weight: bold;
 }
+
 .token.italic {
   font-style: italic;
 }
@@ -1048,10 +1140,12 @@ pre[class*="language-"][data-line] {
   padding-bottom: 0;
   padding-left: 0;
 }
+
 pre[data-line] code {
   position: relative;
   padding-left: 4em;
 }
+
 pre .line-highlight {
   margin-top: 0;
 }

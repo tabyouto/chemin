@@ -858,7 +858,7 @@ article.post .more-link a {
   float: none;
 }
 .butterBar {
-  transition: .5s ease all ;
+  transition: .5s ease all;
 }
 .comment-wrap {
   margin: 48px auto;
@@ -868,9 +868,9 @@ article.post .more-link a {
   color: #e43737;
 }
 .comment-wrap p img {
-  height: 1.5em!important;
+  height: 1.5em !important;
   vertical-align: middle;
-  max-height: 1.5em!important;
+  max-height: 1.5em !important;
 }
 .comment-wrap .comment-time {
   display: block;
@@ -1157,6 +1157,61 @@ input[type='search'] {
 }
 .search-no-results ul li a {
   color: #8C8C8C;
+}
+/**post-links 友情链接**/
+.links {
+  overflow: hidden;
+}
+.links .link-title {
+  color: rgba(0, 0, 0, 0.74);
+  font-weight: 100;
+}
+.links li.link-item {
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+}
+.links li.link-item:before,
+.links li.link-item:after {
+  right: 0;
+  bottom: 0;
+  background: #000;
+}
+.links li.link-item:before {
+  width: 100%;
+  height: 2px;
+  transform: translateX(-100%);
+}
+.links li.link-item:after {
+  width: 2px;
+  height: 100%;
+  transform: translateY(100%);
+}
+.links li.link-item > a {
+  display: block;
+  padding: 10px;
+}
+.links li.link-item > a:before,
+.links li.link-item > a:after {
+  left: 0;
+  top: 0;
+  background: #000;
+}
+.links li.link-item > a:before {
+  width: 100%;
+  height: 2px;
+  transform: translateX(100%);
+}
+.links li.link-item > a:after {
+  width: 2px;
+  height: 100%;
+  transform: translateY(-100%);
+}
+.links li.link-item:hover:before,
+.links li.link-item:hover:after,
+.links li.link-item:hover > a:before,
+.links li.link-item:hover > a:after {
+  transform: translate(0, 0);
 }
 /**滚动条**/
 :-webkit-scrollbar-track,
