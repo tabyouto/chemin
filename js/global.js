@@ -39,6 +39,35 @@
 
 
 
+        $.fn.postLike = function() {
+            if ($(this).hasClass('is-active')) {
+                alert('您已赞过该文章');
+                return false;
+            } else {
+                $(this).addClass('is-active ');
+                var id = $(this).data("id"),
+                    action = $(this).data('action'),
+                    rateHolder = $(this).children('.js-count');
+                var ajax_data = {
+                    action: "specs_zan",
+                    um_id: id,
+                    um_action: action
+                };
+                $.post(ajaxcomment.ajax_url, ajax_data,
+                    function(data) {
+                        $(rateHolder).html(data);
+                    });
+                return false;
+            }
+        };
+        $(document).on("click", ".js-rating", function() {
+            $(this).postLike();
+        });
+
+
+
+
+
 
 
 

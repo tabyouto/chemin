@@ -92,6 +92,12 @@ function chemin_scripts()
 
     wp_enqueue_script('global', get_template_directory_uri() . '/js/global.js', array('jq'), CHEMIN_VERSION, true);
 
+//    wp_localize_script( 'global', 'hacker_object', array(
+//        'ajaxurl' => admin_url('admin-ajax.php'),
+//        'rating_nonce' => wp_create_nonce( 'rating_post_nonce' ),
+//        'liked_text' => __('You already liked this post!', 'hacker')
+//    ) );
+
     if (is_single()) {
         wp_enqueue_script('prettyCode', get_template_directory_uri() . '/js/prettyCode.js', array('jq'), CHEMIN_VERSION, true);
 
@@ -163,6 +169,26 @@ function chemin_setup()
         'image',
         'status',
     ));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Set up the WordPress core custom background feature.
     add_theme_support('custom-background', apply_filters('chemin_custom_background_args', array(
@@ -532,5 +558,34 @@ function get_link_items()
     }
     return $result;
 }
+
+
+
+
+/**
+ * 点赞功能
+ */
+add_action('wp_ajax_nopriv_specs_zan', 'specs_zan');
+add_action('wp_ajax_specs_zan', 'specs_zan');
+function specs_zan(){
+    global $wpdb,$post;
+    $id = $_POST["um_id"];
+    $action = $_POST["um_action"];
+    if ( $action == 'ding'){
+        $specs_raters = get_post_meta($id,'specs_zan',true);
+        $expire = time() + 99999999;
+        $domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : false; // make cookies work with localhost
+        setcookie('specs_zan_'.$id,$id,$expire,'/',$domain,false);
+        if (!$specs_raters || !is_numeric($specs_raters)) {
+            update_post_meta($id, 'specs_zan', 1);
+        }
+        else {
+            update_post_meta($id, 'specs_zan', ($specs_raters + 1));
+        }
+        echo get_post_meta($id,'specs_zan',true);
+    }
+    die;
+}
+
 
 ?>

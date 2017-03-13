@@ -1234,6 +1234,18 @@ input[type='search'] {
 .links li.link-item:hover > a:after {
   transform: translate(0, 0);
 }
+.icon-heart {
+  display: inline-block;
+  width: 18px;
+  vertical-align: bottom;
+  height: 18px;
+  background: url("images/icon-heart.svg") center center no-repeat;
+  background-size: contain;
+}
+.js-rating.is-active .icon-heart {
+  background: url("images/icon-heart-fill-red.svg") center center no-repeat;
+  background-size: contain;
+}
 /**滚动条**/
 :-webkit-scrollbar-track,
 ::-webkit-scrollbar-track-piece {

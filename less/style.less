@@ -909,6 +909,22 @@ input[type='search'] {
   }
 }
 
+.icon-heart {
+  display: inline-block;
+  width: 18px;
+  vertical-align: bottom;
+  height: 18px;
+  background: url("images/icon-heart.svg") center center no-repeat;
+  background-size: contain;
+}
+.js-rating.is-active .icon-heart {
+  background: url("images/icon-heart-fill-red.svg") center center no-repeat;
+  background-size: contain;
+  //F03838
+  //-webkit-mask: url(images/icon-heart-fill-red.svg);
+  //mask: url(images/icon-heart-fill-red.svg);
+}
+
 /**滚动条**/
 //::-moz-selection {
 //  color: #fff;

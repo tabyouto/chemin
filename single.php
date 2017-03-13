@@ -23,11 +23,7 @@ get_header(); ?>
                                     the_tags('', ' ', ' ');
                                }?>
                     </div>
-                    <div class="post-like">
-                        <a href="">
-                            <i class="icon iconFont no-like">&#xe664;</i>12
-                        </a>
-                    </div>
+                    <?php get_template_part( 'template-parts/content', 'post-like' ); ?>
                 </footer>
             <?php endwhile; endif; ?>
         </article>
