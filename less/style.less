@@ -925,6 +925,47 @@ input[type='search'] {
   //mask: url(images/icon-heart-fill-red.svg);
 }
 
+
+/***page-navigation***/
+.page-navigation {
+  .entry-content {
+    overflow: hidden;
+    .url-wrap {
+      width: 165px;
+      height: 73px;
+      float: left;
+      padding: 10px;
+      cursor: pointer;
+      margin-right: 15px;
+      &:hover {
+        background-color: #f9f9f9;
+        a {
+          span {
+            color: #2b2b2b;
+          }
+        }
+      }
+      a {
+        line-height: 32px;
+        font-size: 16px;
+        color: #3a7ab7;
+      }
+      a,
+      span{
+        display: block;
+      }
+      span {
+        line-height: 18px;
+        font-size: 12px;
+        text-decoration: none;
+        padding-top: 5px;
+        color: #585858;
+      }
+
+    }
+  }
+}
+
 /**滚动条**/
 //::-moz-selection {
 //  color: #fff;
