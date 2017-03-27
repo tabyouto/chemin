@@ -16,7 +16,7 @@
                 <i class="iconFont">&#xe600;</i>: <span class="notice-content"><?php echo chemin_option('notice_title');?></span>
             </div>
             <div class="article-wrap" id="article-wrap">
-                <h2 class="main-title">近况：</h2>
+                <div class="main-title">近况：</div>
                 <?php
                 if (have_posts()):
                     while (have_posts()) : the_post(); ?>
@@ -24,9 +24,7 @@
                             <div class="feature">
                                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                     <?php if(catch_first_image()!==""): ?>
-                                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                             <img src="<?php echo catch_first_image() ?>" alt="<?php the_title(); ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image"  width="150" height="150">
-                                        </a>
                                     <?php endif; ?>
                                 </a>
                             </div>

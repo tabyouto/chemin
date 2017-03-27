@@ -12,7 +12,7 @@
                 <i class="iconFont">&#xe634;</i>
                 <input type="search" value="" name="s" placeholder="search..." id="SearchInput" onkeydown= "if(event.keyCode==13)search_at.submit()" />
             </div>
-            <label type="submit" id="searchsubmit" class="Label" for="SearchInput"></label>
+            <label id="searchsubmit" class="Label" for="SearchInput"></label>
         </div>
     </form>
 </div>
