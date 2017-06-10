@@ -50,14 +50,16 @@
         <div class="nav-wrap">
             <a href="<?php bloginfo('url'); ?>" class="logo">Chemin</a>
             <a href="javascript:;" class="search-icon"><i class="iconFont">&#xe634;</i></a>
-            <?php wp_nav_menu(
-                array(
-                    'theme_location' => 'primary',
-                    'container' => '',
-                    'items_wrap' => '%3$s',
-                    'depth' => 0,
-                )
-            ); ?>
+            <ul>
+                <?php wp_nav_menu(
+                    array(
+                        'theme_location' => 'primary',
+                        'container' => '',
+                        'items_wrap' => '%3$s',
+                        'depth' => 0,
+                    )
+                ); ?>
+            </ul>
         </div>
 
     </nav>
