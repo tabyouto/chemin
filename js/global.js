@@ -83,6 +83,15 @@
         callback_set: function() {}
     });
 
+    $('.open-all').on('click',function() {
+        var urlArr = [];
+        $('table tr a').each(function(i,item) {
+            urlArr.push('http://'+ $(item).text())
+        })
+        urlArr.forEach(function(item) {
+            window.open(item,'_blank');
+        })
+    })
 
 
 

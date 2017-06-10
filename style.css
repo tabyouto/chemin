@@ -1234,6 +1234,33 @@ input[type='search'] {
 .links li.link-item:hover > a:after {
   transform: translate(0, 0);
 }
+table {
+  font-size: 13px;
+  display: block;
+  overflow: auto;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-break: normal;
+}
+table thead tr {
+  background-color: #f7f7f7;
+}
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+table tr:hover {
+  background-color: #f7f7f7;
+}
+table td,
+table th {
+  padding: 10px 15px;
+  white-space: nowrap;
+  border: 1px solid #ddd;
+  color: #525252;
+}
 .icon-heart {
   display: inline-block;
   width: 18px;
