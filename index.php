@@ -1,16 +1,16 @@
 <?php get_header(); ?>
-    <div class="center-bg">
-            <div class="center-info">
-                <div class="avatar-wrap">
-                    <div style="background-image: url('<?php echo chemin_option('focus_logo', ''); ?>')"></div>
-                </div>
-                <div class="center-msg">
-                    <?php echo chemin_option('admin_des'); ?>
-                </div>
-            </div>
-            <div class="slant-left"></div>
-            <div class="slant-right"></div>
-        </div>
+<!--    <div class="center-bg">-->
+<!--            <div class="center-info">-->
+<!--                <div class="avatar-wrap">-->
+<!--                    <div style="background-image: url('--><?php //echo chemin_option('focus_logo', ''); ?>/*')"></div>*/
+/*                </div>*/
+/*                <div class="center-msg">*/
+/*                    */<?php //echo chemin_option('admin_des'); ?>
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="slant-left"></div>-->
+<!--            <div class="slant-right"></div>-->
+<!--        </div>-->
         <div id="content">
             <div class="notice">
                 <i class="iconFont">&#xe600;</i>: <span class="notice-content"><?php echo chemin_option('notice_title');?></span>
